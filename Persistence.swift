@@ -1,6 +1,7 @@
         //
         //  Persistence.swift
-        //  Jamlog
+        //  Updated core data class includes two method for easily 
+        //  fetching and updating attributes. Global usage examples in comments.
         //
         //  Created by Brian Ruff on 12/21/23.
         //
@@ -13,7 +14,7 @@ struct PersistenceController {
     let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "Jamlog")
+        container = NSPersistentCloudKitContainer(name: "AppName")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
